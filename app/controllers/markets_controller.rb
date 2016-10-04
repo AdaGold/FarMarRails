@@ -1,9 +1,10 @@
 class MarketsController < ApplicationController
   def index
+    @markets = Market.all
   end
 
   def show
-    @markets = Market.all
+    @market = Market.find(params[:id])
   end
 
   def new

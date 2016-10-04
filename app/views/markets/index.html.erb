@@ -1,5 +1,8 @@
-<h1>Markets#index</h1>
-
+<section>
 <% @markets.each do |market| %>
-  <%= market.name %>
+  <p>
+    <%= link_to(market.name, show_markets_path(market.id))%>
+    <%= "| #{market.city}, #{market.state}" %>
+  </p>
 <% end %>
+</section>
