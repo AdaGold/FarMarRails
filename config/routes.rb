@@ -1,4 +1,20 @@
 Rails.application.routes.draw do
+
+  root to: 'users#index'
+  get 'users/index', as: 'index'
+
+  get 'users/show'
+
+  get 'users/new'
+
+  get 'users/create'
+
+  get 'users/edit'
+
+  get 'users/update'
+
+  get 'users/destroy'
+
   get 'sales/index'
 
   get 'sales/show'
@@ -41,9 +57,9 @@ Rails.application.routes.draw do
 
   get 'vendors/destroy'
 
-  get 'markets/index'
+  get 'markets/index' => 'markets#index', as: 'markets_index'
 
-  get 'markets/show'
+  get 'markets/show/:id' => 'markets#show', as: 'show_markets'
 
   get 'markets/new'
 

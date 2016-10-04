@@ -1,9 +1,8 @@
-class MarketsController < ApplicationController
+class UsersController < ApplicationController
   def index
   end
 
   def show
-    @markets = Market.all
   end
 
   def new
