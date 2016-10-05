@@ -1,2 +1,9 @@
 <h1>Users#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
+
+<%# link_to "Guest", show_user_path(type: "guest"), :class => 'homepage_button'  %>
+<%# link_to "Market", show_user_path(type: "market") %>
+<%# link_to "Vendor", show_user_path(type: "vendor") %>
+
+<%= button_to "Guest", show_user_path(type: "guest"), method: :get, :class => 'homepage_button' %>
+<%= button_to "Market", show_user_path(type: "market"), method: :get, :class => 'homepage_button'  %>
+<%= button_to "Vendor", show_user_path(type: "vendor"), method: :get, :class => 'homepage_button'   %>
