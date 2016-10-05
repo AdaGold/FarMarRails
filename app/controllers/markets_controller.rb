@@ -10,6 +10,8 @@ class MarketsController < ApplicationController
   end
 
   def new
+    @market = Market.new
+    @method = :post
   end
 
   def create
