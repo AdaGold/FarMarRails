@@ -6,3 +6,15 @@
   <br>
   <%= "#{@market.county} County" %></p>
 </section>
+
+<%# params %>
+
+<%# @vendors %>
+
+
+<section>
+  <h3>Vendors at this market:</h3>
+  <% @vendors.each do |vendor| %>
+    <p><%= link_to(vendor.name, show_vendors_path(vendor.id))%></p>
+  <% end %>
+</section>

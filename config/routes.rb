@@ -45,7 +45,7 @@ Rails.application.routes.draw do
 
   get 'vendors/index'
 
-  get 'vendors/show'
+  get 'vendors/show/:id' => 'vendors#show', as: 'show_vendors'
 
   get 'vendors/new'
 
