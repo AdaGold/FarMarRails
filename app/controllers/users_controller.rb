@@ -3,10 +3,16 @@ class UsersController < ApplicationController
   end
 
   def show
+    @markets = Market.all
+
+    @user = params[:type]
+    if @user == "vendor"
+      redirect_to index_vendors_url(type: @user)
+    end
   end
 
   def new
-    
+
   end
 
   def create

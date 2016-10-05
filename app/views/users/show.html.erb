@@ -1,5 +1,22 @@
-<h1>Users#show</h1>
+<% if @user == "market" %>
+  <h3>Add a new market: </h3>
+  <%= button_to "New Market", new_markets_path, method: :get, class: 'btn' %>
+<% end %>
 
+<section>
+<h3>Active markets: </h3>
+<% @markets.each do |market| %>
+  <p>
+    <%= link_to(market.name, show_markets_path(market.id))%>
+    <%= "| #{market.city}, #{market.state}" %>
+  </p>
 
+  <% if @user == "market" %>
+    <%= button_to "Edit", edit_markets_path(id: market.id), method: :get, class: 'btn' %>
+    <%= button_to "Remove", delete_markets_path(id: market.id), method: :delete, class: 'btn' %>
+  <% end %>
+
+<% end %>
+</section>
 
 <%= params %>

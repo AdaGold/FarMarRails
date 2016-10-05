@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'users#index'
   get 'users/index', as: 'index'
 
-  get 'users/show/:type/' => 'users#show', as: "show_user"
+  get 'users/show/:type/' => 'users#show', as: "show_users"
 
   get 'users/new'
 
@@ -43,7 +43,7 @@ Rails.application.routes.draw do
 
   get 'products/destroy'
 
-  get 'vendors/index'
+  get 'vendors/index' => 'vendors#index', as: 'index_vendors'
 
   get 'vendors/show/:id' => 'vendors#show', as: 'show_vendors'
 
@@ -57,19 +57,19 @@ Rails.application.routes.draw do
 
   get 'vendors/destroy'
 
-  get 'markets/index' => 'markets#index', as: 'markets_index'
+  get 'markets/index' => 'markets#index', as: 'index_markets'
 
   get 'markets/show/:id' => 'markets#show', as: 'show_markets'
 
-  get 'markets/new'
+  get 'markets/new' => 'markets#new', as: 'new_markets'
 
-  get 'markets/create'
+  post 'markets/create'
 
-  get 'markets/edit'
+  get 'markets/edit/:id' => 'markets#edit', as: 'edit_markets'
 
   get 'markets/update'
 
-  get 'markets/destroy'
+  delete 'markets/destroy' => 'markets#destroy', as: 'delete_markets'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
