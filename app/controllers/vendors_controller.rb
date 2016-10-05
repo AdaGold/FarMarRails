@@ -18,5 +18,10 @@ class VendorsController < ApplicationController
   end
 
   def destroy
+
+    @vendor = Vendor.find(params[:id])
+    # @vendor.destroy
+    #
+    redirect_to show_markets_url(id: @vendor.market.id, type: "market")
   end
 end

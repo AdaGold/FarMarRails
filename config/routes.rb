@@ -51,15 +51,15 @@ Rails.application.routes.draw do
 
   get 'vendors/create'
 
-  get 'vendors/edit'
+  get 'vendors/edit' => 'vendors#edit', as: 'edit_vendors'
 
   get 'vendors/update'
 
-  get 'vendors/destroy'
+  delete 'vendors/destroy' => 'vendors#destroy', as: 'delete_vendors'
 
   get 'markets/index' => 'markets#index', as: 'index_markets'
 
-  get 'markets/show/:id' => 'markets#show', as: 'show_markets'
+  get 'markets/show/:id/:type' => 'markets#show', as: 'show_markets'
 
   get 'markets/new' => 'markets#new', as: 'new_markets'
 
@@ -67,7 +67,7 @@ Rails.application.routes.draw do
 
   get 'markets/:id/edit' => 'markets#edit', as: 'edit_markets'
 
-  put 'markets/:id/update' => 'markets#update', as: 'update_markets'
+  patch 'markets/:id/update' => 'markets#update', as: 'update_markets'
 
   delete 'markets/destroy' => 'markets#destroy', as: 'delete_markets'
 
