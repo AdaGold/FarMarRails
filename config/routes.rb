@@ -63,11 +63,11 @@ Rails.application.routes.draw do
 
   get 'markets/new' => 'markets#new', as: 'new_markets'
 
-  post 'markets/create'
+  post 'markets/create' => 'markets#create', as: 'create_markets'
 
-  get 'markets/edit/:id' => 'markets#edit', as: 'edit_markets'
+  get 'markets/:id/edit' => 'markets#edit', as: 'edit_markets'
 
-  get 'markets/update'
+  put 'markets/:id/update' => 'markets#update', as: 'update_markets'
 
   delete 'markets/destroy' => 'markets#destroy', as: 'delete_markets'
 

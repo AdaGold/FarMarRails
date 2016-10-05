@@ -15,12 +15,25 @@ class MarketsController < ApplicationController
   end
 
   def create
+
+    @market = Market.new(name: params[:market][:name], address: params[:market][:address], city: params[:market][:city], county: params[:market][:county], state: params[:market][:state], zip: params[:market][:zip])
+    @market.save
+    redirect_to show_users_url(type: "market")
+
   end
 
   def edit
+    @market = Market.find(params[:id])
+
+    @method = :put
   end
 
   def update
+
+    @market = Market.update(params[:id], {name: params[:market][:name], address: params[:market][:address], city: params[:market][:city], county: params[:market][:county], state: params[:market][:state], zip: params[:market][:zip]})
+
+    redirect_to show_markets_url(id: params[:id])
+
   end
 
   def destroy

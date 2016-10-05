@@ -4,37 +4,37 @@
 <%= form_for @market, method: @method, url: action_name do |f| %>
 
   <div class="field">
-    <%= f.label :name %> <!-- title is the name of the instance varaible to name this with -->
-    <%= f.text_field :name, :name => nil, :required => true %>
+    <%= f.label "Name" %> <!-- title is the name of the instance varaible to name this with -->
+    <%= f.text_field :name, "Name" => nil, :required => true %>
   </div>
 
   <div class="field">
     <%= f.label :address %>
-    <%= f.text_field :address, :name => nil, :required => true  %>
+    <%= f.text_field :address, :address => nil, :required => true  %>
   </div>
 
   <div class="field">
     <%= f.label :city %>
-    <%= f.text_field :city, :name => nil, :required => true   %>
+    <%= f.text_field :city, :city => nil, :required => true   %>
   </div>
 
   <div class="field">
     <%= f.label :county %>
-    <%= f.text_field :county, :name => nil, :required => true   %>
+    <%= f.text_field :county, :county => nil, :required => true   %>
   </div>
 
   <div class="field">
     <%= f.label :state %>
-    <%= f.text_field :state, :name => nil, :required => true   %>
+    <%= f.text_field :state, :state => nil, :required => true   %>
   </div>
 
   <div class="field">
     <%= f.label :zip %>
-    <%= f.number_field :zip, :name => nil, :required => true   %>
+    <%= f.number_field :zip, :zip => nil, :required => true   %>
   </div>
+
+  
 
   <%= f.submit action_name, class: 'submit_btn' %>
 <% end %>
 </div>
-
-<%= 'Need to make the create method for this form, check nil field' %>
