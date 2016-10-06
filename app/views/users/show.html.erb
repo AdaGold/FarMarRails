@@ -27,7 +27,7 @@
 
 <% elsif @user == "vendor"  %>
 
-  <h3>Active Vendors: </h3>
+  <h2>Active Vendors: </h2>
   <% @vendors.each do |vendor| %>
     <p>
       <%= link_to(vendor.name, index_vendors_path(vendor.id))%>
