@@ -31,7 +31,7 @@ class MarketsController < ApplicationController
   def update
     @market = Market.update(params[:id], {name: params[:market][:name], address: params[:market][:address], city: params[:market][:city], county: params[:market][:county], state: params[:market][:state], zip: params[:market][:zip]})
 
-    redirect_to show_markets_url(id: params[:id], type: "market")
+    redirect_to show_users_url(type: "market")
   end
 
   def destroy

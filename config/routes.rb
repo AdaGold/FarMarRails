@@ -33,13 +33,13 @@ Rails.application.routes.draw do
 
   get 'products/show/:id' => 'products#show', as: 'show_products'
 
-  get 'products/new' => 'products#new', as: 'new_products'
+  get 'products/:vendor_id/new' => 'products#new', as: 'new_products'
 
-  get 'products/create'
+  post 'products/:vendor_id/create' => 'products#create', as: 'create_products'
 
-  get 'products/edit/:id/:vendor_id' => 'products#edit', as: 'edit_products'
+  get 'products/:id/:vendor_id/edit' => 'products#edit', as: 'edit_products'
 
-  get 'products/update/:id/:vendor_id' => 'products#update', as: 'update_products'
+  patch 'products/:id/:vendor_id/update' => 'products#update', as: 'update_products'
 
   delete 'products/destroy' => 'products#destroy', as: 'delete_products'
 

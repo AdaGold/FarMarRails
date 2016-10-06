@@ -11,6 +11,13 @@ class VendorsController < ApplicationController
   end
 
   def show
+    @vendor = Vendor.find(params[:id])
+    # @products = Product.find_by(vendor_id: params[:id])
+
+    @products = []
+    @vendor.product_ids.each do | product_id |
+      @products << Product.find(product_id)
+    end
 
   end
 
@@ -39,7 +46,6 @@ class VendorsController < ApplicationController
   end
 
   def destroy
-
     @vendor = Vendor.find(params[:id])
     @vendor.destroy
 

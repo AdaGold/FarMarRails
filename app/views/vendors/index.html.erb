@@ -1,14 +1,12 @@
 <h1> Vendor Products </h1>
 
-<%= @products %>
-
 <section>
   <h1><%= @vendor.name %></h1>
   <p><%= "Number of employees: #{@vendor.no_employees} " %></p>
 </section>
 
 <h3>Add a new product: </h3>
-<%= button_to "New Product", new_products_path, method: :get, class: 'btn' %>
+<%= button_to "New Product", new_products_path(vendor_id: @vendor.id), method: :get, class: 'btn' %>
 
 <section>
   <h3>Vendors at this vendor:</h3>
