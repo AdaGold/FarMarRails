@@ -14,8 +14,7 @@
 
 <section>
   <h3>Your total sales:</h3>
-  <%# @product.total_revenue %>
-    <p><%# %></p>
+  <%= to_dollars(@revenue) %>
   <%= button_to "Manage Sales", index_sales_path(id: @vendor.id), method: :get, class: 'btn' %>
 </section>
 

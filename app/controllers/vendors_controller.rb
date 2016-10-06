@@ -7,6 +7,8 @@ class VendorsController < ApplicationController
       @products << Product.find(product_id)
     end
 
+    @revenue = @vendor.total_revenue
+
   end
 
   def show

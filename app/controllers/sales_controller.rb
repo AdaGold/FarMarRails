@@ -1,6 +1,7 @@
 class SalesController < ApplicationController
   def index
-    @product = Product.find(params[:id])
+    @vendor = Vendor.find(params[:id])
+
 
   end
 
