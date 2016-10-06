@@ -20,18 +20,22 @@ class VendorsController < ApplicationController
   end
 
   def create
-    @vendor = Vendor.new(name: params[:vendor][:name], no_employees: params[:vendor][:no_employees], market_id: 1)
-    # ADDED the ' market_id: 1 ' as a placeholder, need to get the real id
+    @vendor = Vendor.new(name: params[:vendor][:name], no_employees: params[:vendor][:no_employees], market_id: params[:market_id])
 
     @vendor.save
 
-    redirect_to show_users_url(type: "market")
+    redirect_to show_markets_url(id: params[:market_id], type: "market")
   end
 
   def edit
+    @vendor = Vendor.find(params[:id])
+
   end
 
   def update
+    @vendor = Vendor.update(params[:id], {name: params[:vendor][:name], no_employees: params[:vendor][:no_employees], market_id: params[:market_id]})
+
+    redirect_to show_markets_url(id: params[:market_id], type: "market")
   end
 
   def destroy

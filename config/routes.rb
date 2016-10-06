@@ -31,15 +31,15 @@ Rails.application.routes.draw do
 
   get 'products/index'
 
-  get 'products/show' => 'products#show', as: 'show_products'
+  get 'products/show/:id' => 'products#show', as: 'show_products'
 
   get 'products/new' => 'products#new', as: 'new_products'
 
   get 'products/create'
 
-  get 'products/edit' => 'products#edit', as: 'edit_products'
+  get 'products/edit/:id/:vendor_id' => 'products#edit', as: 'edit_products'
 
-  get 'products/update'
+  get 'products/update/:id/:vendor_id' => 'products#update', as: 'update_products'
 
   delete 'products/destroy' => 'products#destroy', as: 'delete_products'
 
@@ -47,13 +47,13 @@ Rails.application.routes.draw do
 
   get 'vendors/show/:id' => 'vendors#show', as: 'show_vendors'
 
-  get 'vendors/new' => 'vendors#new', as: 'new_vendors'
+  get 'vendors/:market_id/new' => 'vendors#new', as: 'new_vendors'
 
-  post 'vendors/create' => 'vendors#create', as: 'create_vendors'
+  post 'vendors/:market_id/create/' => 'vendors#create', as: 'create_vendors'
 
-  get 'vendors/edit' => 'vendors#edit', as: 'edit_vendors'
+  get 'vendors/:id/:market_id/edit' => 'vendors#edit', as: 'edit_vendors'
 
-  get 'vendors/update'
+  patch 'vendors/:id/:market_id/update' => 'vendors#update', as: 'update_vendors'
 
   delete 'vendors/destroy' => 'vendors#destroy', as: 'delete_vendors'
 
