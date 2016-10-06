@@ -15,9 +15,9 @@ Rails.application.routes.draw do
 
   get 'users/destroy'
 
-  get 'sales/index'
+  get 'sales/index/:id' => 'sales#index', as: 'index_sales'
 
-  get 'sales/show'
+  get 'sales/show/:id' => 'sales#show', as: 'show_sales'
 
   get 'sales/new'
 
@@ -29,7 +29,7 @@ Rails.application.routes.draw do
 
   get 'sales/destroy'
 
-  get 'products/index'
+  get 'products/index/:id' => 'products#index', as: 'index_products'
 
   get 'products/show/:id' => 'products#show', as: 'show_products'
 

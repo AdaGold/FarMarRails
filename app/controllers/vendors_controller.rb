@@ -1,7 +1,6 @@
 class VendorsController < ApplicationController
   def index
     @vendor = Vendor.find(params[:id])
-    # @products = Product.find_by(vendor_id: params[:id])
 
     @products = []
     @vendor.product_ids.each do | product_id |
