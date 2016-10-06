@@ -19,9 +19,9 @@ Rails.application.routes.draw do
 
   get 'sales/show/:id' => 'sales#show', as: 'show_sales'
 
-  get 'sales/new'
+  get 'sales/:vendor_id/new' => 'sales#new', as: 'new_sales'
 
-  get 'sales/create'
+  get 'sales/:vendor_id/create' => 'sales#create', as: 'create_sales'
 
   get 'sales/edit'
 

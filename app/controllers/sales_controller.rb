@@ -1,14 +1,13 @@
 class SalesController < ApplicationController
   def index
     @vendor = Vendor.find(params[:id])
-
-
   end
 
   def show
   end
 
   def new
+    @sale = Sale.new
   end
 
   def create

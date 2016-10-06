@@ -1,7 +1,7 @@
 <section>
   <h2><%= @vendor.name %></h2>
   <h3> Sales </h3>
-
-  
-
 </section>
+
+<h3>Add a new sale: </h3>
+<%= button_to "New Sale", new_sales_path(vendor_id: @vendor.id), method: :get, class: 'btn' %>
