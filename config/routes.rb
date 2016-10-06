@@ -31,25 +31,25 @@ Rails.application.routes.draw do
 
   get 'products/index'
 
-  get 'products/show'
+  get 'products/show' => 'products#show', as: 'show_products'
 
-  get 'products/new'
+  get 'products/new' => 'products#new', as: 'new_products'
 
   get 'products/create'
 
-  get 'products/edit'
+  get 'products/edit' => 'products#edit', as: 'edit_products'
 
   get 'products/update'
 
-  get 'products/destroy'
+  delete 'products/destroy' => 'products#destroy', as: 'delete_products'
 
-  get 'vendors/index' => 'vendors#index', as: 'index_vendors'
+  get 'vendors/index/:id' => 'vendors#index', as: 'index_vendors'
 
   get 'vendors/show/:id' => 'vendors#show', as: 'show_vendors'
 
-  get 'vendors/new'
+  get 'vendors/new' => 'vendors#new', as: 'new_vendors'
 
-  get 'vendors/create'
+  post 'vendors/create' => 'vendors#create', as: 'create_vendors'
 
   get 'vendors/edit' => 'vendors#edit', as: 'edit_vendors'
 

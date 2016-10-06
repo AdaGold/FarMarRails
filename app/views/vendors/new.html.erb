@@ -1,2 +1,10 @@
-<h1>Vendors#new</h1>
-<p>Find me in app/views/vendors/new.html.erb</p>
+<h1>New Vendor</h1>
+
+
+<article>
+
+<%= params %>
+
+<%= render partial: "form", locals: {action_name: "create"}%>
+
+</article>

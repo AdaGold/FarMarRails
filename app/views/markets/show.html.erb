@@ -7,6 +7,10 @@
   <%= "#{@market.county} County" %></p>
 </section>
 
+<% if @user == "market" %>
+  <h3>Add a new vendor: </h3>
+  <%= button_to "New Vendor", new_vendors_path, method: :get, class: 'btn' %>
+<% end %>
 
 <section>
   <h3>Vendors at this market:</h3>

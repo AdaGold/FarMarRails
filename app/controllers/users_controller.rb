@@ -4,11 +4,12 @@ class UsersController < ApplicationController
 
   def show
     @markets = Market.all
+    @vendors = Vendor.all
 
     @user = params[:type]
-    if @user == "vendor"
-      redirect_to index_vendors_url(type: @user)
-    end
+    # if @user == "vendor"
+    #   redirect_to index_vendors_url(type: @user)
+    # end
   end
 
   def new
