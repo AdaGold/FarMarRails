@@ -1,7 +1,5 @@
-<h1> Vendor Products </h1>
-
 <section>
-  <h1><%= @vendor.name %></h1>
+  <h2><%= @vendor.name %></h2>
   <p><%= "Number of employees: #{@vendor.no_employees} " %></p>
 </section>
 
@@ -9,9 +7,7 @@
   <h3>Products at this vendor:</h3>
   <% @products.each do |product| %>
     <p><%= product.name %></p>
-
   <% end %>
-
 </section>
 
 <%= params %>

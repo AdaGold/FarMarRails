@@ -11,6 +11,11 @@ class SalesController < ApplicationController
   end
 
   def create
+    # @sale = Sale.new(amount: params[:sale][:amount], purchase_time: params[:sale][:purchase_time], vendor_id: params[:vendor_id])
+
+    # @sale.save
+
+    # redirect_to index_products_url(id: params[:vendor_id])
   end
 
   def edit

@@ -21,7 +21,7 @@ Rails.application.routes.draw do
 
   get 'sales/:vendor_id/new' => 'sales#new', as: 'new_sales'
 
-  get 'sales/:vendor_id/create' => 'sales#create', as: 'create_sales'
+  post 'sales/:vendor_id/create' => 'sales#create', as: 'create_sales'
 
   get 'sales/edit'
 
