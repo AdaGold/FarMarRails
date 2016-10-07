@@ -2,8 +2,14 @@
 
 <article>
 
-<%= params %>
-
-<%= render partial: "form", locals: {action_name: "create"}%>
+  <section>
+    <h3>Add the amount of the product sold:</h3>
+    <% @products.each do |product| %>
+      <p><%= product.name%></p>
+      <%= render partial: "form", locals: {action_name: "create", id: product.id}%>
+    <% end %>
+  </section>
 
 </article>
+
+<%= params %>
