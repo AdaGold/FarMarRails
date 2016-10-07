@@ -1,8 +1,17 @@
 class SalesController < ApplicationController
   def index
     @vendor = Vendor.find(params[:id])
-
     @sales = @vendor.sales
+
+
+    if params[:select] == nil || params[:sales_showing] == "all"
+      @sales = @vendor.sales
+    elsif params[:select][:month].is_a?(String)
+      year = params[:select][:month][0..3].to_i
+      month = params[:select][:month][5..6].to_i
+
+      @sales = @vendor.sales_by_month(month, year)
+    end
 
   end
 
@@ -30,5 +39,21 @@ class SalesController < ApplicationController
   end
 
   def destroy
+  end
+
+  def button
+    # @task = Task.find(params[:id])
+    # @task.toggle!(:completed)
+    #
+    # if @task.completed
+    #   @task.completed_at = Time.now
+    # else
+    #   @task.completed_at = nil
+    # end
+    #
+    # @task.save
+
+    # redirect_to(:back(sales_showing: params[:sales_showing]))
+
   end
 end

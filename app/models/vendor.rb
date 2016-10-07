@@ -26,11 +26,26 @@ class Vendor < ActiveRecord::Base
 
   def revenue_by_month(month, year)
     beginning_time = DateTime.new(year, month)
-    end_time = DateTime.new(year, month+1)
+    end_time = DateTime.new(year, month).end_of_month
 
     revenue = revenue_between(beginning_time, end_time)
 
     return revenue
+  end
+
+
+  def sales_by_month(month, year)
+    beginning_time = DateTime.new(year, month)
+    end_time = DateTime.new(year, month).end_of_month
+
+    sales_between = []
+
+    sales.each do |sale|
+      if sale.purchase_time >= beginning_time && sale.purchase_time < end_time
+        sales_between << sale
+      end
+    end
+    return sales_between
   end
 
 end

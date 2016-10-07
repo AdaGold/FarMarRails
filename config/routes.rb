@@ -29,6 +29,8 @@ Rails.application.routes.draw do
 
   get 'sales/destroy'
 
+  patch 'sales/:id/button'=> 'sales#button', as: 'show_button'
+
   get 'products/index/:id' => 'products#index', as: 'index_products'
 
   get 'products/show/:id' => 'products#show', as: 'show_products'
