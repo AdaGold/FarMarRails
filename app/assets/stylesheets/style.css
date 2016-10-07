@@ -1,0 +1,151 @@
+
+header {
+  background-color: #0067a3;
+  height: 15vw;
+  margin-bottom: 1vw;
+}
+
+h1 {
+color: white;
+padding-top: 3.5vw;
+padding-left: 4vw;
+font-size: 3rem;
+text-align: left;
+}
+
+/*h4 {
+  color: black;
+  padding-top: 3.5vw;
+  font-size: 2.5rem;
+}*/
+
+nav {
+  margin: 1.75vw 0 1vw 7vw;
+}
+
+nav li a {
+  background-color:#0067a3;
+  color: white;
+  font-size: 1.75rem;
+  float: left;
+  padding: 1.5vw 2.5vw 0 2.5vw;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 2.5rem;
+  padding: 2vw;
+  text-align: left;
+}
+
+h2#homepage {
+  padding: 2vw;
+  margin-left: 2vw;
+  margin-top: 3vw;
+}
+
+h3 {
+  font-size: 2rem;
+  padding: 1vw;
+}
+
+article {
+  text-align: left;
+  padding: 4vw 0 2vw 5vw;
+}
+
+p {
+  font-size: 1.75rem;
+  line-height: 1.5;
+  padding: 2vw 2vw 2vw 0;
+  /*width: 50%;
+  float: left;
+  text-align: right;*/
+}
+
+.markets {
+  font-size: 1.5rem;
+  padding: 2vw;
+  float: left;
+  text-align: right;
+}
+
+.markets p {
+  width: 75%;
+  margin-left: 4vw;
+}
+
+.guests {
+  font-size: 1.5rem;
+  padding: 2vw;
+  float: left;
+  text-align: right;
+}
+
+.guests p {
+  width: 75%;
+  margin-left: 4vw;
+}
+
+.vendors {
+
+}
+
+/*article a, h3 {
+  font-size: 1.75rem;
+  padding: 2vw 0 1vw 0;
+}*/
+
+.form .field {
+  display: block;
+  padding: 1vw;
+  margin: 4vw;
+}
+
+.form .field input {
+  padding: 1vw;
+  font-size: 16pt;
+  box-sizing: border-box;
+  width: 60vw;
+  height: 5vw;
+  border: 3px #0067a3 solid;
+}
+
+.form .field label {
+  font-size: 18pt;
+  font-weight: bold;
+  padding: 2vw;
+}
+
+.homepage_button {
+  font-size: 20pt;
+  height: 7vh;
+  width: 80%;
+  background-color: #0067a3;
+  color: white;
+  border: none;
+  margin-top: 3vw;
+}
+
+form.button_to {
+  width: 20%;
+  display: inline-block;
+  margin-top: 1vw;
+  margin-bottom: 2vw;
+  padding-right: 1vw;
+}
+
+.btn {
+  font-size: 20pt;
+  height: 7vh;
+  width: 80%;
+  background-color: #0067a3;
+  color: white;
+  border: none;
+}
+
+
+/***/
