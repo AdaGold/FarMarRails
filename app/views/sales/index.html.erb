@@ -6,13 +6,18 @@
 <%= button_to "New Sale", new_sales_path(vendor_id: @vendor.id), method: :get, class: 'btn' %>
 
 <section>
-  <h3>Your sales:</h3>
-  <%# @sales.each do |sale| %>
-    <p><%# "Amount: #{to_dollars(sale.amount)}" %></p>
-    <p><%# "Purchase time: #{sale.purchase_time}" %></p>
-    <p><%# "Purchase time: #{sale.purchase_time}" %></p>
-
-  <%# end %>
+  <h3>Your total sales:</h3>
+  <ol>
+    <% @sales.each do |sale| %>
+      <li>
+        <p><%= "Product: #{sale.product.name}" %>
+          <br>
+        <%= "Amount: #{to_dollars(sale.amount)}" %>
+          <br>
+        <%= "Purchase time: #{sale.purchase_time}" %></p>
+      </li>
+    <% end %>
+  </ol>
 </section>
 
 <%= params %>

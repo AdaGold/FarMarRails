@@ -7,11 +7,6 @@
     <%= f.number_field :amount, :amount => nil, :required => true, class: :text_field, step: :any %>
   </div>
 
-  <div class="field">
-    <%= f.label :purchase_time %> 
-    <%= f.datetime_field :purchase_time, :purchase_time => nil, :required => true %>
-  </div>
-
   <%= f.submit action_name, class: 'submit_btn' %>
 <% end %>
 </div>
