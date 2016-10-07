@@ -6,7 +6,22 @@
 <%= button_to "New Sale", new_sales_path(vendor_id: @vendor.id), method: :get, class: 'btn' %>
 
 <section>
-  <h3>Your total sales:</h3>
+  <h3>View sales: </h3>
+
+  <p><%=  button_to("View all sales", index_sales_path(id: @vendor.id), params: {sales_showing: "all"}, method: "get") %></p>
+
+  <!-- <p><%=  button_to("View All Sales", index_sales_path(id: @vendor.id), params: {sales_showing: "all"}, method: "get") %></p> -->
+
+  <div class="form">
+    <%= form_for :select, method: "get" do |f| %> <%# could have - method: @method - before url to specify the method PUT via a variable created in controller%>
+        <%# f.label :month_selector %> <!-- title is the name of the instance varaible to name this with -->
+        <%= f.month_field :month, :month_selector => nil, :required => true %>
+        <%= f.hidden_field :sales_showing, :value => "month" %>
+      <%= f.submit "View sales for selected month", class: 'submit_btn' %>
+    <% end %>
+  </div>
+
+  <% if @sales != nil %>
   <ol>
     <% @sales.each do |sale| %>
       <li>
@@ -18,6 +33,7 @@
       </li>
     <% end %>
   </ol>
+  <% end %>
 </section>
 
 <%= params %>
