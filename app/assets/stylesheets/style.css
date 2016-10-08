@@ -43,8 +43,8 @@ h2 {
 
 h2#homepage {
   padding: 2vw;
-  margin-left: 2vw;
-  margin-top: 3vw;
+  margin-left: 6vw;
+  margin-top: 5vw;
 }
 
 h3 {
@@ -60,7 +60,7 @@ article {
 p {
   font-size: 1.75rem;
   line-height: 1.5;
-  padding: 2vw 2vw 2vw 0;
+  padding: 2vw 0 2vw 0;
   /*width: 50%;
   float: left;
   text-align: right;*/
@@ -68,17 +68,22 @@ p {
 
 .markets {
   font-size: 1.5rem;
-  padding: 2vw 2vw 2vw 6vw;
+  padding: 4vw 2vw 4vw 6vw;
   float: left;
   text-align: left;
-  width: 55%;
-  display: inline-block;
-  /* padding: 2vw;
-  text-align: right;*/
+  /*width: 55%;*/
+  /*display: inline-block;*/
+  /*padding: 2vw;*/
 }
 
+/*.market {
+  display: block;
+}*/
 .markets p {
-  margin-left: 4vw;
+  /*margin-left: 4vw;*/
+  padding-left: 4vw;
+  display: inline-block;
+  width: 55%;
 }
 
 .guests {
@@ -133,22 +138,31 @@ p {
 }
 
 form.button_to {
-  width: 20%;
   display: inline-block;
-  margin-top: 1vw;
-  margin-bottom: 2vw;
-  padding-right: 1vw;
-  float: left;
+  /*margin-top: 1vw;
+  margin-bottom: 2vw;*/
+  padding-left: 2vw;
+  /*float: left;*/
+}
+
+#market_buttons {
+width: 30%;
+display: inline-block;
+float: right;
+text-align: center;
+padding-right: 6vw;
+margin-top: 1.75vw;
 }
 
 .btn {
   font-size: 20pt;
-  height: 7vh;
-  width: 80%;
+  height: 6vh;
+  width: 11vw;
+  /*width: 150px;
+  width: 80%;*/
   background-color: #0067a3;
   color: white;
   border: none;
-  float: left;
 }
 
 

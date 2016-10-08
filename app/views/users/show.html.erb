@@ -5,18 +5,20 @@
       <h2>Add a new market: </h2>
       <%= button_to "New Market", new_markets_path, method: :get, class: 'btn' %>
     </section>
-
     <h2>Active markets: </h2>
       <% @markets.each do |market| %>
-        
+      <section class="market">
         <p>
           <%= link_to(market.name, show_markets_path(market.id, @user))%>
           <%= "| #{market.city}, #{market.state}" %>
         </p>
+        <div id="market_buttons">
           <%= button_to "Edit", edit_markets_path(id: market.id), method: :get, class: 'btn' %>
           <%= button_to "Remove", delete_markets_path(id: market.id), method: :delete, class: 'btn', data: { confirm: "Are you sure you want to delete this Vendor from your Market?" } %>
-      <% end %>
-    </section>
+        </div>
+      </section>
+    <% end %>
+  </section>
 
 
 <% elsif @user == "guest"  %>
