@@ -1,3 +1,8 @@
+# links to Trello and ERD:
+https://trello.com/b/6JRDemNP/farmar-board
+
+https://www.lucidchart.com/invitations/accept/7e76aa32-fd18-47fc-9a31-084ec081b6e9
+
 # FarMar Rails
 Build a database backend application to view, create, and manage farmers markets as well as their vendors, products, and sales.
 In this implementation we'll be seeding with static data, and also building a tool to allow markets and/or vendors to sign up and add their own data.
@@ -24,8 +29,6 @@ Before you start writing _any_ code:
 Once the above is complete, this project:
 
 - requires a shared repo with your partner as a collaborator
-- will need to be isolated into a gemset called 'FarMarRails'
-  - create the necessary files for RVM to recognize a gemset
 - requires you to create a Rails application
   - conform to Rails conventions on naming and inflection
   - by using `rails new .` you will create a new rails app _inside_ of the fork folder instead of creating a _new_ folder for your rails app
