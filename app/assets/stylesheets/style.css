@@ -6,18 +6,12 @@ header {
 }
 
 h1 {
-color: white;
-padding-top: 3.5vw;
-padding-left: 4vw;
-font-size: 3rem;
-text-align: left;
-}
-
-/*h4 {
-  color: black;
+  color: white;
   padding-top: 3.5vw;
-  font-size: 2.5rem;
-}*/
+  padding-left: 4vw;
+  font-size: 3.25rem;
+  text-align: left;
+}
 
 nav {
   margin: 1.75vw 0 1vw 7vw;
@@ -28,7 +22,7 @@ nav li a {
   color: white;
   font-size: 1.75rem;
   float: left;
-  padding: 1.5vw 2.5vw 0 2.5vw;
+  padding: 1.25vw 2.5vw 0 2.5vw;
 }
 
 nav a {
@@ -61,29 +55,26 @@ p {
   font-size: 1.75rem;
   line-height: 1.5;
   padding: 2vw 0 2vw 0;
-  /*width: 50%;
-  float: left;
-  text-align: right;*/
 }
 
 .markets {
   font-size: 1.5rem;
-  padding: 4vw 2vw 4vw 6vw;
+  padding: 2vw 2vw 4vw 6vw;
   float: left;
   text-align: left;
-  /*width: 55%;*/
-  /*display: inline-block;*/
-  /*padding: 2vw;*/
 }
 
-/*.market {
-  display: block;
-}*/
 .markets p {
-  /*margin-left: 4vw;*/
   padding-left: 4vw;
   display: inline-block;
   width: 55%;
+}
+
+.new_aside h2 {
+  text-align: left;
+  display: inline-block;
+  width: 25%;
+  margin-bottom: 1vw;
 }
 
 .guests {
@@ -98,13 +89,20 @@ p {
 }
 
 .vendors {
-
+  font-size: 1.5rem;
+  padding: 2vw 2vw 4vw 6vw;
+  float: left;
+  text-align: left;
 }
 
-/*article a, h3 {
-  font-size: 1.75rem;
-  padding: 2vw 0 1vw 0;
-}*/
+.vendors p {
+  padding-left: 6vw;
+}
+
+#vendor {
+  column-count: 2;
+  column-gap: 8vw;
+}
 
 .form .field {
   display: block;
@@ -129,12 +127,19 @@ p {
 
 .homepage_button {
   font-size: 20pt;
-  height: 7vh;
-  width: 80%;
+  height: 12vh;
+  width: 18vw;
+  /*background: url('./images/market.jpg');*/
   background-color: #0067a3;
   color: white;
   border: none;
   margin-top: 3vw;
+  margin-left: 2vw;
+}
+
+.homepage_button input {
+  /*background: url('./images/market.jpg');*/
+
 }
 
 form.button_to {
@@ -158,8 +163,6 @@ margin-top: 1.75vw;
   font-size: 20pt;
   height: 6vh;
   width: 11vw;
-  /*width: 150px;
-  width: 80%;*/
   background-color: #0067a3;
   color: white;
   border: none;
