@@ -1,11 +1,10 @@
-<section>
+<section class="markets">
   <h2><%= @market.name %></h2>
   <p><%= "#{@market.address}" %>
   <br>
   <%= "#{@market.city}, #{@market.state} #{@market.zip}" %>
   <br>
   <%= "#{@market.county} County" %></p>
-</section>
 
 <% if @user == "market" %>
   <section class="new_aside">
@@ -14,7 +13,7 @@
   </section>
 <% end %>
 
-<section>
+
   <h3>Vendors at this market:</h3>
   <% @vendors.each do |vendor| %>
     <p><%= link_to(vendor.name, show_vendors_path(vendor.id))%></p>
@@ -28,5 +27,3 @@
 
   <% end %>
 </section>
-
-<%= params %>

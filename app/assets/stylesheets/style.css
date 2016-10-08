@@ -44,6 +44,8 @@ h2#homepage {
 h3 {
   font-size: 2rem;
   padding: 1vw;
+  margin-left: 1vw;
+  margin-top: 2vw;
 }
 
 article {
