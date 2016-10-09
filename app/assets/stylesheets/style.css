@@ -1,5 +1,6 @@
-html, body {
+body {
   min-width: 100%;
+  font-family: Garamond;
 }
 
 header {
@@ -8,10 +9,21 @@ header {
   margin-bottom: 1vw;
 }
 
+a {
+  text-decoration: none;
+  color: #00507f;
+  font-weight: bold;
+}
+
+a:hover, a:focus {
+  text-decoration: underline;
+  text-decoration-color: #0067a3;
+}
+
 h1 {
   color: white;
   padding-top: 3.5vw;
-  padding-left: 4vw;
+  padding-left: 5vw;
   font-size: 3.25rem;
   text-align: left;
 }
@@ -25,11 +37,16 @@ nav li a {
   color: white;
   font-size: 1.75rem;
   float: left;
-  padding: 1.25vw 2.5vw 0 2.5vw;
+  margin: 0.25vw 1.5vw 0 1.5vw;
+  padding: 1vw;
+  text-decoration: none;
 }
 
-nav a {
-  text-decoration: none;
+nav a:hover, nav a:focus {
+  background-color: white;
+  color: #0067a3;
+  font-weight: bold;
+  transition: all .3s ease-in-out;
 }
 
 h2 {
@@ -47,13 +64,7 @@ h2#homepage {
 h3 {
   font-size: 2rem;
   padding: 1vw;
-  margin-left: 1vw;
-  margin-top: 1vw;
-}
-
-article {
-  text-align: left;
-  padding: 4vw 0 2vw 5vw;
+  margin: 1vw;
 }
 
 p {
@@ -91,7 +102,7 @@ p {
 .vendors p {
   padding-left: 6vw;
   display: inline-block;
-  width: 55%;
+  width: 50%;
 }
 
 #columns {
@@ -100,16 +111,16 @@ p {
 }
 
 .form .field {
-  display: block;
+  display: inline-block;
   padding: 1vw;
-  margin: 4vw;
+  margin: 0 3vw 3vw 4vw;
 }
 
 .form .field input {
   padding: 1vw;
   font-size: 16pt;
   box-sizing: border-box;
-  width: 60vw;
+  width: 30vw;
   height: 5vw;
   border: 3px #0067a3 solid;
 }
@@ -132,9 +143,21 @@ p {
   margin-left: 2vw;
 }
 
+/*.homepage_button#guest {
+  background: url('../images/guest.jpg') no-repeat fixed center;
+}*/
+
+.homepage_button:hover, .homepage_button:focus {
+  background-color: white;
+  color: #0067a3;
+  font-weight: bold;
+  transition: all .3s ease-in-out;
+  border: 3px #0067a3 solid;
+}
+
 form.button_to {
   display: inline-block;
-  padding-left: 2vw;
+  padding-right: 2vw;
 }
 
 #market_buttons {
@@ -155,6 +178,14 @@ form.button_to {
   border: none;
 }
 
+.btn:hover, .btn:focus {
+  background-color: white;
+  color: #0067a3;
+  font-weight: bold;
+  transition: all .3s ease-in-out;
+  border: 3px #0067a3 solid;
+}
+
 /*input.vendor_btn {
   float:right;
   display: inline-block;
@@ -170,13 +201,29 @@ form.button_to {
   margin: 1.75vw 0 2vw 0vw;
 }
 
-/*form.submit-btn {
+.vendor_btn:hover, .vendor_btn:focus {
+  background-color: white;
+  color: #0067a3;
+  font-weight: bold;
+  transition: all .3s ease-in-out;
+  border: 3px #0067a3 solid;
+}
+
+.submit_btn {
   font-size: 20pt;
   height: 6vh;
-  width: 11vw;
+  width: 15vw;
   background-color: #0067a3;
   color: white;
   border: none;
-}*/
+}
+
+.submit_btn:hover, .submit_btn:focus {
+  background-color: white;
+  color: #0067a3;
+  font-weight: bold;
+  transition: all .3s ease-in-out;
+  border: 3px #0067a3 solid;
+}
 
 /***/

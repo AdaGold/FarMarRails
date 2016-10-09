@@ -1,10 +1,10 @@
 
-<section class="markets">
+<section class="vendors">
   <h2><%= "#{@vendor.name} Products" %></h2>
 
   <section class="new_aside">
     <h3>Add a new product: </h3>
-    <%= button_to "New Product", new_products_path(vendor_id: @vendor.id), method: :get, class: 'btn' %>
+    <%= button_to "New Product", new_products_path(vendor_id: @vendor.id), method: :get, class: 'vendor_btn' %>
   </section>
 
   <h3>Your products:</h3>

@@ -7,6 +7,6 @@
     <%= f.number_field :amount, :amount => nil, :required => true, class: :text_field, step: :any %>
     <%= f.hidden_field :product_id, :value => id %>
   </div>
-  <%= f.submit "Add Sale", class: 'submit_btn' %>
+  <%= f.submit action_name, class: 'submit_btn' %>
 <% end %>
 </div>

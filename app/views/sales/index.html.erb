@@ -1,14 +1,13 @@
-<section>
+<section class="vendors">
   <h2><%= "#{@vendor.name} Sales" %></h2>
-</section>
 
-<h3>Add a new sale: </h3>
-<%= button_to "New Sale", new_sales_path(vendor_id: @vendor.id), method: :get, class: 'btn' %>
-
-<section>
-  <h3>View sales: </h3>
-
-  <p><%=  button_to("View all sales", index_sales_path(id: @vendor.id), params: {sales_showing: "all"}, method: "get") %></p>
+  <section class="new_aside">
+    <h3>Add a new sale: </h3>
+    <%= button_to "New Sale", new_sales_path(vendor_id: @vendor.id), method: :get, class: 'vendor_btn' %>
+    <br>
+    <h3>View sales: </h3>
+    <%= button_to("All sales", index_sales_path(id: @vendor.id), params: {sales_showing: "all"}, method: "get", class: 'vendor_btn') %>
+  </section>
 
   <!-- <p><%=  button_to("View All Sales", index_sales_path(id: @vendor.id), params: {sales_showing: "all"}, method: "get") %></p> -->
 
@@ -17,7 +16,7 @@
         <%# f.label :month_selector %> <!-- title is the name of the instance varaible to name this with -->
         <%= f.month_field :month, :month_selector => nil, :required => true %>
         <%= f.hidden_field :sales_showing, :value => "month" %>
-      <%= f.submit "View sales for selected month", class: 'submit_btn' %>
+      <%= f.submit "Sales by month", class: 'submit_btn' %>
     <% end %>
   </div>
 
@@ -35,5 +34,3 @@
   </ol>
   <% end %>
 </section>
-
-<%= params %>
