@@ -6,12 +6,12 @@
   <br>
   <%= "#{@market.county} County" %></p>
 
-<% if @user == "market" %>
-  <section class="new_aside">
-    <h3>Add a new vendor: </h3>
-    <%= button_to "New Vendor", new_vendors_path(market_id: @market.id), method: :get, class: 'btn' %>
-  </section>
-<% end %>
+  <% if @user == "market" %>
+    <section class="new_aside">
+      <h3>Add a new vendor: </h3>
+      <%= button_to "New Vendor", new_vendors_path(market_id: @market.id), method: :get, class: 'btn' %>
+    </section>
+  <% end %>
 
 
   <h3>Vendors at this market:</h3>

@@ -1,13 +1,12 @@
 
-<section>
+<section class="markets">
   <h2><%= "#{@vendor.name} Products" %></h2>
-</section>
 
-<!-- add new_aside section here? -->
-<h3>Add a new product: </h3>
-<%= button_to "New Product", new_products_path(vendor_id: @vendor.id), method: :get, class: 'btn' %>
+  <section class="new_aside">
+    <h3>Add a new product: </h3>
+    <%= button_to "New Product", new_products_path(vendor_id: @vendor.id), method: :get, class: 'btn' %>
+  </section>
 
-<section>
   <h3>Your products:</h3>
   <% @products.each do |product| %>
     <p><%= product.name%></p>
@@ -17,5 +16,3 @@
   <% end %>
 
 </section>
-
-<%= params %>

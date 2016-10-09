@@ -22,7 +22,7 @@
 
 
 <% elsif @user == "guest"  %>
-  <section class="guests">
+  <section class="markets">
     <h2>Active markets: </h2>
     <% @markets.each do |market| %>
       <p>
@@ -36,12 +36,12 @@
 <% else @user == "vendor"  %>
   <section class="vendors">
     <h2>Active vendors: </h2>
-    <section id="vendor">
+    <div id="columns">
       <% @vendors.each do |vendor| %>
         <p>
           <%= link_to(vendor.name, index_vendors_path(vendor.id))%>
         </p>
       <% end %>
-    </section>
+    </div>
   </section>
 <% end %>

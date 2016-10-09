@@ -1,3 +1,6 @@
+html, body {
+  min-width: 100%;
+}
 
 header {
   background-color: #0067a3;
@@ -45,7 +48,7 @@ h3 {
   font-size: 2rem;
   padding: 1vw;
   margin-left: 1vw;
-  margin-top: 2vw;
+  margin-top: 1vw;
 }
 
 article {
@@ -67,41 +70,31 @@ p {
 }
 
 .markets p {
-  padding-left: 4vw;
+  padding-left: 6vw;
   display: inline-block;
-  width: 55%;
+  width: 50%;
 }
 
-.new_aside h2 {
+.new_aside h2, .new_aside h3 {
   text-align: left;
   display: inline-block;
   width: 25%;
   margin-bottom: 1vw;
 }
 
-.guests {
-  font-size: 1.5rem;
-  padding: 2vw 2vw 2vw 6vw;
-  float: left;
-  text-align: left;
-}
-
-.guests p {
-  padding-left: 6vw;
-}
-
 .vendors {
   font-size: 1.5rem;
   padding: 2vw 2vw 4vw 6vw;
-  float: left;
   text-align: left;
 }
 
 .vendors p {
   padding-left: 6vw;
+  display: inline-block;
+  width: 55%;
 }
 
-#vendor {
+#columns {
   column-count: 2;
   column-gap: 8vw;
 }
@@ -139,36 +132,51 @@ p {
   margin-left: 2vw;
 }
 
-.homepage_button input {
-  /*background: url('./images/market.jpg');*/
-
-}
-
 form.button_to {
   display: inline-block;
-  /*margin-top: 1vw;
-  margin-bottom: 2vw;*/
   padding-left: 2vw;
-  /*float: left;*/
 }
 
 #market_buttons {
-width: 30%;
-display: inline-block;
-float: right;
-text-align: center;
-padding-right: 6vw;
-margin-top: 1.75vw;
+  width: 30%;
+  display: inline-block;
+  float: right;
+  text-align: center;
+  padding-right: 6vw;
+  margin-top: 1.75vw;
 }
 
 .btn {
+  font-size: 20pt;
+  height: 6vh;
+  width: 11.5vw;
+  background-color: #0067a3;
+  color: white;
+  border: none;
+}
+
+/*input.vendor_btn {
+  float:right;
+  display: inline-block;
+}*/
+
+.vendor_btn {
+  font-size: 20pt;
+  height: 6vh;
+  width: 16vw;
+  background-color: #0067a3;
+  color: white;
+  border: none;
+  margin: 1.75vw 0 2vw 0vw;
+}
+
+/*form.submit-btn {
   font-size: 20pt;
   height: 6vh;
   width: 11vw;
   background-color: #0067a3;
   color: white;
   border: none;
-}
-
+}*/
 
 /***/
