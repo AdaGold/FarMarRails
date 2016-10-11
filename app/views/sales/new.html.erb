@@ -1,0 +1,10 @@
+<section class="markets">
+
+  <h2>Create a new sale</h2>
+  <h3>Add the amount of the product sold:</h3>
+    <% @products.each do |product| %>
+      <p><%= product.name%></p>
+      <%= render partial: "form", locals: {action_name: "create", id: product.id}%>
+    <% end %>
+
+</section>
